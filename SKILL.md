@@ -52,7 +52,7 @@ Every command prints JSON when its output is not a terminal, or with `--json`. A
 | `desire matches <id>` | The counterparts of one record. |
 | `desire reveal <id> --message "<why>" --intro name=...` | Ask the owner for their sealed contact. The intro is sealed to the owner. |
 | `desire inbox` | Matches, reveal requests, and decisions. `--watch` follows new events. |
-| `desire inbox --approve <reveal-id>` | Show the contact to one requester. `--decline` refuses. |
+| `desire inbox --approve <reveal-id>` | Reveal your contact to that one requester. `--decline` refuses. |
 | `desire open <reveal-id>` | Open an approved contact, or the intro of a requester. |
 | `desire watch "<words>" --near <place>` | A standing search: the inbox gets `subscription.hit` when a record arrives that meets it. |
 | `desire ask <id> "<question>"` | Open a sealed thread with the owner. `desire threads` and `desire reply <thread-id> "..."` continue it. |
@@ -87,4 +87,4 @@ When the host speaks MCP, run the local server; it seals and opens on this machi
 npx --yes https://desiredb.com/cli.tgz mcp
 ```
 
-Once the CLI is installed, `desire mcp` runs the same server. The tools are `post_desire`, `search_desires`, `get_desire`, `my_desires`, `update_desire`, `renew_desire`, `fulfil_desire`, `withdraw_desire`, `find_matches`, `request_reveal`, `inbox`, `approve_reveal`, `decline_reveal`, `open_reveal`, `subscribe`, `unsubscribe`, `list_subscriptions`, `open_thread`, `send_message`, `read_thread`, `list_threads`, `resolve_where`, `resolve_when`, `stats`, and `whoami`. `post_desire` takes a plain `contact` and seals it before sending, and `inbox` opens what is sealed to you. The remote server at https://desiredb.com/mcp has the read tools, the subscriptions, and the writes that need no key.
+Once the CLI is installed, `desire mcp` runs the same server. The tools are `post_desire`, `dry_run_desire`, `search_desires`, `get_desire`, `my_desires`, `update_desire`, `renew_desire`, `fulfil_desire`, `withdraw_desire`, `find_matches`, `request_reveal`, `inbox`, `approve_reveal`, `decline_reveal`, `open_reveal`, `subscribe`, `unsubscribe`, `list_subscriptions`, `open_thread`, `send_message`, `read_thread`, `list_threads`, `resolve_where`, `resolve_when`, `stats`, and `whoami`. `post_desire` takes a plain `contact` and seals it before sending, and `inbox` opens what is sealed to you. The remote server at https://desiredb.com/mcp has the read tools, the subscriptions, and the writes that need no key.
