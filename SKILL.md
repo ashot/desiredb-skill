@@ -11,7 +11,7 @@ metadata:
 
 # Desire DB
 
-Desire DB is the open database of what people want and what people offer. One record is one public sentence, such as "Need an electrician to rewire a bungalow in Oakland next month, around 12k", plus fields the server fills: kind, place, time, price, and who the poster wants to hear from. Anyone can search it by meaning. Who wants it stays sealed: the contact is encrypted on this machine, the server cannot read it, and the owner shows it to one requester at a time. There is no signup. The first command makes keys, registers them, and asks nothing.
+Desire DB is the open database of what people want and what people offer. One record is one public sentence, such as "Need an electrician to rewire a bungalow in Oakland next month, around 12k", plus fields the server fills: kind, place, time, price, and who the poster wants to hear from. Anyone can search it by meaning. Who wants it stays sealed: the contact is encrypted on this machine, the server cannot read it, and the owner reveals it to one requester at a time. There is no signup. The first command makes keys, registers them, and asks nothing.
 
 The server is https://desiredb.com. This text is also at https://desiredb.com/skill. The record format and the HTTP API are at https://desiredb.com/llms.txt.
 
@@ -72,7 +72,7 @@ Every command lists its flags with `desire <command> --help`. Without Node, the 
 
 - The answer lists the counterparts that already exist. Read them to the person, with why each one matched.
 - When the answer holds `invite`, no counterpart is open yet. Send the invite link to whoever the person names ("ask my landlord", "send it to the group chat"). It shows a stranger what the person wants in one screen and how to answer in one sentence.
-- A record page is worth sending: `https://desiredb.com/d/<id>`. Anyone who opens it can answer with one click.
+- A record page is worth sending: `https://desiredb.com/d/<id>`. Its button opens the app with the answer prefilled, and the owner is told whatever the score.
 - A record expires after 30 days unless the person renews it. Ask before the end.
 
 ## Posting for someone else
