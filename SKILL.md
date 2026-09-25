@@ -46,10 +46,10 @@ Every command prints JSON when its output is not a terminal, or with `--json`. A
 
 | Command | What it does |
 |---|---|
-| `desire post "<sentence>" --contact email=...` | Post. The answer holds the record, the fields the server filled, and the counterparts already waiting. |
+| `desire post "<sentence>" --contact email=...` | Post. The answer holds the record, the fields the server filled, and the matches already waiting. |
 | `desire post --for "<name>" "<sentence>" --contact ...` | Post for someone else. Prints a handover link; send it to that person. |
 | `desire search "<words>" --near <place> --radius <km>` | Search by meaning, place, time, and price. |
-| `desire matches <id>` | The counterparts of one record. |
+| `desire matches <id>` | The matches of one record. |
 | `desire reveal <id> --message "<why>" --intro name=...` | Ask the owner for their sealed contact. The message is not sealed, so it names no one; the intro is sealed to the owner. |
 | `desire inbox` | Matches, reveal requests, and decisions. `--follow` prints new events as they arrive. |
 | `desire inbox --approve <reveal-id>` | Reveal your contact to that one requester. `--decline` refuses. |
@@ -70,7 +70,7 @@ Every command lists its flags with `desire <command> --help`. Without Node, the 
 
 ## After a post
 
-- The answer lists the counterparts that already exist. Read them to the person, with why each one matched.
+- The answer lists the matches that already exist. Read them to the person, with why each one matched.
 - When the answer holds `invite`, no counterpart is open yet. Send the invite link to whoever the person names ("ask my landlord", "send it to the group chat"). It shows a stranger what the person wants in one screen and how to answer in one sentence.
 - A record page is worth sending: `https://desiredb.com/d/<id>`. Its button opens the app with the answer prefilled, and the owner is told whatever the score.
 - A record expires after 30 days unless the person renews it. Ask before the end.
